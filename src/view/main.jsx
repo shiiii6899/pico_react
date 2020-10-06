@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sub from './sub';
+import Rate from './rate';
+import Profit from './profit';
+import Return from './return';
 
 function Root() {
   return (
     <div>
-      <h1>Hello World!!!!!!!</h1>
-      <Sub />
+      <h1 className="title">ウダツベーシックインカム計算機</h1>
+
+      <p>この計算機を使用して、予想される収益とリターンに基づく5年間の売買</p>
+      <p>収益を算出します。<b>利率</b>（将来のキャッシュフローの現在価値を特定する</p>
+      <p>のに使う利率）を入力してから、予想される<b>売買数値</b>と<b>利確（払い戻し）</b></p>
+      <p>を下の表に入力してください。</p>
+      
+      <Rate/>
+      <Profit/>
+      <Return/>
     </div>
   );
 }

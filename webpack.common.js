@@ -18,7 +18,19 @@ module.exports = {
     filename: '[name].bundle.js',
   },
   module: {
-    rules: [
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options :{
+                modules : true
+              }
+            },
+          ],
+        },
       {
         test: /\.js[x]?$/,
         loader: 'babel-loader',
